@@ -7,20 +7,39 @@
     let suggestions: Suggestion[] = [];
 </script>
 
-<div>
+<div class="container">
     <Search data={searchData} bind:results bind:suggestions>
         {#if results.length}
-            <ul>
+            <div class="result-container">
                 {#each results as result}
-                    <li>
-                        {result.title}
-                    </li>
+                    <div class="result">
+                        <span>
+                            <h3 class="p-0 m-0">
+                                {result.title}
+                            </h3>
+                        </span>
+                        <span>
+                            <h3 class="p-0 m-0">Artist: {result.artist}</h3>
+                        </span>
+                        <span>
+                            <h3 class="p-0 m-0">Year: {result.year}</h3>
+                        </span>
+                        <span>
+                            <h3 class="p-0 m-0">Billboard Position: {result.rank}</h3>
+                        </span>
+                    </div>
                 {/each}
-            </ul>
+            </div>
         {:else}
             <p>No data found!</p>
         {/if}
     </Search>
+
+    <p>
+        This is a demo of the Search Component using same dataset as the Minisearch
+        <a href="https://lucaong.github.io/minisearch/examples/">demo</a>: try searching through
+        more than 5000 top songs and artists in Billboard Hot 100 from year 1965 to 2015.
+    </p>
 
     <span class="git-link">
         Go to github:
@@ -42,6 +61,38 @@
 </div>
 
 <style>
+    * {
+        font-family: sans-serif;
+        line-height: 1.5;
+    }
+
+    .p-0 {
+        padding: 0;
+    }
+
+    .m-0 {
+        margin: 0;
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .result-container {
+        height: 350px;
+        overflow: auto;
+    }
+
+    .result {
+        gap: 0.5rem;
+        display: flex;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        flex-direction: column;
+        border-bottom: 1px solid #888;
+    }
+
     .git-link {
         margin-top: 1rem;
         gap: 0.5rem;

@@ -73,6 +73,8 @@
             miniSearch.documentCount
         ) {
             results = miniSearch.search(searchQuery);
+            console.log(results);
+
             suggestions = miniSearch.autoSuggest(searchQuery);
         }
     }
