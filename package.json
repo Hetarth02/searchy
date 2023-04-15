@@ -1,6 +1,6 @@
 {
     "name": "svelte-searchy",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A simple no-brainer pluggable search component for svelte!",
     "type": "module",
     "license": "MIT",
