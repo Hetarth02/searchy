@@ -39,7 +39,8 @@
     "bugs": {
         "url": "https://github.com/Hetarth02/searchy/issues"
     },
-    "homepage": "https://github.com/Hetarth02/searchy#readme",
+    "homepage": "https://svelte-searchy.netlify.app/",
+    "readme": "https://github.com/Hetarth02/searchy#readme",
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
