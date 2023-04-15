@@ -1,6 +1,8 @@
 {
-    "name": "searchy",
+    "name": "svelte-searchy",
     "version": "0.0.1",
+    "description": "A simple no-brainer pluggable search component for svelte!",
+    "type": "module",
     "license": "MIT",
     "scripts": {
         "dev": "vite dev",
@@ -13,6 +15,31 @@
         "lint": "prettier --plugin-search-dir . --check . && eslint .",
         "format": "prettier --plugin-search-dir . --write ."
     },
+    "repository": {
+        "type": "github",
+        "url": "https://github.com/Hetarth02/searchy"
+    },
+    "keywords": [
+        "svelte search",
+        "search component",
+        "package",
+        "svelte component"
+    ],
+    "author": {
+        "name": "Hetarth Shah",
+        "email": "hetarth02@gmail.com",
+        "url": "https://hetarth02.github.io/"
+    },
+    "contributors": [
+        {
+            "name": "Sanjay Boricha",
+            "url": "https://sanjayboricha.github.io/"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/Hetarth02/searchy/issues"
+    },
+    "homepage": "https://github.com/Hetarth02/searchy#readme",
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
@@ -46,7 +73,6 @@
     },
     "svelte": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "type": "module",
     "dependencies": {
         "minisearch": "^6.0.1"
     }
