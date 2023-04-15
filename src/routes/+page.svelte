@@ -1,13 +1,16 @@
 <script lang="ts">
+    import searchData from './data.json';
     import { Search } from '$lib/index.ts';
-    import data from './data.json';
+    import type { PageData } from './$types';
     import type { SearchResult, Suggestion } from 'minisearch';
+
+    export let data: PageData;
 
     let results: SearchResult[] = [];
     let suggestions: Suggestion[] = [];
 </script>
 
-<Search {data} bind:results bind:suggestions>
+<Search data={searchData} bind:results bind:suggestions>
     {#if results.length}
         <ul>
             {#each results as result}
@@ -20,3 +23,5 @@
         <p>No data found!</p>
     {/if}
 </Search>
+
+{@html data.markdownText}
