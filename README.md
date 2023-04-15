@@ -1,6 +1,8 @@
 # Svelte-Searchy 🔍
 A simple no-brainer pluggable search component for svelte!
 
+Demo: https://svelte-searchy.netlify.app/
+
 # Installation 💽
 ```sh
 npm i svelte-searchy
